@@ -3,7 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10
-    working_directory: ~/PersonalWebsite
+    steps:
+      - checkout
+      - run: echo "hello world"
   deploy:
     machine:
       enabled: true
