@@ -1,9 +1,13 @@
 version: 2
 jobs:
+  build:
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/PersonalWebsite
   deploy:
     machine:
       enabled: true
-    working_directory: cd ..
+    working_directory: ~/PersonalWebsite
     steps:
        - run:
           name: Deploy
