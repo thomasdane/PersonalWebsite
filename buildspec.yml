@@ -1,0 +1,16 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - "echo Download from GitHub"
+  build:
+    commands:
+      - "echo Upload to S3"
+  post_build:
+    commands:
+      - 'aws s3 sync "/" "s3://tom-dane" --delete --acl "public-read"'
+artifacts:
+  base-directory: public
+  files:
+    - "**/*"
+  discard-paths: yes
