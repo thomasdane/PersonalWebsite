@@ -10,7 +10,7 @@ phases:
   post_build:
     commands:
       - "echo Clear previous version from cache"
-      - 'aws cloudfront create-invalidation --distribution-id E3W3JKH6YQS9XN --paths /*'
+      - 'aws cloudfront create-invalidation --distribution-id E3W3JKH6YQS9XN --paths "/*"'
 artifacts:
   files:
     - "**/*"
