@@ -8,7 +8,7 @@ phases:
       - "echo Upload to S3"
   post_build:
     commands:
-      - 'aws s3 sync "/" "s3://tom-dane" --delete --acl "public-read"'
+      - 'aws s3 cp "index.html" "s3://tom-dane" --delete --acl "public-read"'
 artifacts:
   base-directory: public
   files:
