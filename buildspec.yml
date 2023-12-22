@@ -8,9 +8,8 @@ phases:
       - "echo Upload to S3"
   post_build:
     commands:
-      - "aws s3 cp index.html s3://tom-dane"
-  artifacts:
-  base-directory: public
+      - "aws s3 cp index.html s3://tom-dane --acl public-read"
+artifacts:
   files:
     - "**/*"
   discard-paths: yes
