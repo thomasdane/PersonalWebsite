@@ -2,15 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/<language>:<version TAG>
     steps:
       - checkout
       - run: echo "hello world"
-  deploy:
-    machine:
-      enabled: true
-    working_directory: ~/PersonalWebsite
-    steps:
-       - run:
-          name: Deploy
-          command: 'aws s3 sync index.html s3://tom-dane --region us-west-1'
