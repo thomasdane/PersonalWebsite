@@ -2,8 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - "echo Start build and deployment"
-      - "echo Download from GitHub"
+      - "echo Downloading from GitHub"
   build:
     commands:
       - "echo Copy files to S3 bucket"
