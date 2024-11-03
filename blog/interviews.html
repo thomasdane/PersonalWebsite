@@ -9,37 +9,24 @@
     <link rel="icon" type="image/png" href="https://tomdane.com/favicon.ico">
     <link rel="canonical" href="https://tomdane.com/blog/interviews.html"/>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            line-height: 1.6; 
-            margin: 20px; 
-            background-color: #f9f9f9; 
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
         }
-        h1, h2, h3 { 
-            color: #333; 
-            border-bottom: 2px solid #007BFF; 
-            padding-bottom: 5px; 
+        h1, h2, h3 {
+            color: #333;
+            margin-top: 20px;
         }
         a { color: #007BFF; }
-        ul { 
-            margin: 10px 0; 
-            padding-left: 20px; 
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
         }
-        p { 
-            margin: 10px 0; 
-            padding: 10px; 
-            border: 1px solid #ddd; 
-            border-radius: 5px; 
-            background-color: #fff; 
-        }
-        .container { 
-            max-width: 800px; 
-            margin: auto; 
-            padding: 20px; 
-            border: 1px solid #ccc; 
-            border-radius: 10px; 
-            background-color: #ffffff; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        p {
+            margin: 10px 0;
+            padding: 0;
         }
     </style>
 
@@ -58,17 +45,38 @@
 
 <div class="container">
     <h1>My approach to Big Tech interviews</h1>
-
     <p>A few friends have asked me how I approached study, interviews and negotiation. This blog outlines the method that worked for me, and I hope it can help others.</p>
 
-    <h2>Before You Begin</h2>
+    <div class="table-of-contents">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#before-you-begin">Before You Begin</a></li>
+                <li><a href="#study-phase">Study Phase</a>
+                    <ul>
+                        <li><a href="#algorithms-and-data-structures">Algorithms and Data Structures</a></li>
+                        <li><a href="#system-design">System Design</a></li>
+                        <li><a href="#behavioral">Behavioral</a></li>
+                    </ul>
+                </li>
+                <li><a href="#interview-phase">Interview Phase</a>
+                    <ul>
+                        <li><a href="#buckets">Buckets</a></li>
+                        <li><a href="#getting-interviews">Getting Interviews</a></li>
+                        <li><a href="#negotiation">Negotiation</a></li>
+                    </ul>
+                </li>
+                <li><a href="#the-state-of-interviewing-and-the-luxury-of-coaching">The State of Interviewing and the Luxury of Coaching</a></li>
+            </ul>
+        </div>
+
+    <h2 id="before-you-begin">Before You Begin</h2>
     <p> Some of this study will feel pointless because it's so different from what you do day-to-day. This frustrated me initially and put me off wanting to study. Then I realized that it's a game, and if you learn to play it, then you can game the system.</p>
     <p> Watch this <a href="https://www.youtube.com/watch?v=0Z9RW_hhUT4">video</a>.</p>
     <p> Make a list of all the big projects you worked on, and write down as many details as you can remember: challenges, what didn't go well, what you learned, technical achievements, everything. You'll need this later for behavioral interviews.</p>
     <p> Know that my approach was to spend money to make more money. As you'll see below, I probably spent about 2k on private coaching for certain interviews. It was a risk, but I more than doubled my salary between Tesla and Atlassian. This is a luxury not everyone has, so I have a meta comment about the sad state of tech interviewing at the bottom.</p>
     <p> Also know that I was unemployed both times I did this process. If you have a job, it might take twice as long. It is really hard because it requires time, good health, stable relationships, and good finances to pay the bills while you study. It shows how ridiculous the tech interview process has become.</p>
 
-    <h2>Study Phase</h2>
+    <h2 id="study-phase">Study Phase</h2>
     <p>I was unemployed so I broke this down into morning and afternoon blocks. These were 2.5 hours each. So 5 hours a day, 5 days a week. It took me about 3 months to feel ready but I had done it before so don't feel bad if it takes longer.</p>
     <ul>
         <li><strong>Mornings:</strong> Algos and DS</li>
@@ -76,13 +84,13 @@
     </ul>
     <p> The behavioral prep (making the list of projects above) you can do in a few days plus a few more days for fitting them to a story framework (discussed later).</p>
 
-    <h3>Algorithms and Data Structures</h3>
+    <h3 id="algorithms-and-data-structures">Algorithms and Data Structures</h3>
     <p> Do this course <a href="https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/">here</a>.</p>
     <p> You can probably skip backtracking and DP, unless you're interviewing at Google.</p>
     <p> When you feel ready, do as many free peer-to-peer mocks on <a href="https://www.pramp.com/dev/uc-data-structures-and-algorithms">Pramp</a> as you can until you're comfortably finishing most of them in 30 minutes.</p>
     <p> I was really bad at these interviews initially and it took weeks and weeks of Pramp before I could even finish one. I was so bad at them I eventually paid for a mock with <a href="https://www.tryexponent.com/coach/Jared-Gutierrez?ref=buy-tom-a-coffee">Jared Gutierrez</a> and he helped me change my approach to fully complete the solution in pseudo code before writing any real code. It helped me actually nail down the logic before turning it into code. It felt scary but sometimes I'd spend 80% of the interview writing pseudo code and then crank out the actual code in the last little bit which was then quite easy. It was a game changer for me.</p>
 
-    <h3>System Design</h3>
+    <h3 id="system-design">System Design</h3>
     <p> This was the interview that has the worst resources online for prep. You can read <em>Designing Data Intensive Applications</em> but I think it's overkill and while it's a great book, it doesn't actually help you play the game of System Design interviews. There's a big difference between real system design on the job and the game of a 45 min interview.</p>
     <p> So many YouTube videos are very high level and not sufficient for Senior/Staff level details. The only channel I found that had the right amount of detail was <a href="https://m.youtube.com/@SDFC/videos">SDFC</a> and also <a href="https://www.youtube.com/@jordanhasnolife5163/videos">Jordan Has No Life</a>, but his humor is very brogrammer and might be off-putting for some people.</p>
     <p> Sign up for this mailing list which summarizes big tech engineering blogs <a href="https://www.quastor.org/">Quastor</a>.</p>
@@ -92,7 +100,7 @@
     <p> I also found these helpful for Staff level: <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/">Microsoft Patterns</a>. For me, the sidecar, saga, and circuit breaker patterns all came up in interviews.</p>
     <p> The best thing I did was mock interviews with <a href="https://www.tryexponent.com/coach/Geoff-Mendal?ref=buy-tom-a-coffee">Geoff Mendal</a> once I felt ready. His sessions fill up months in advance, so book them early.</p>
 
-    <h3>Behavioral</h3>
+    <h3 id="behavioral">Behavioral</h3>
     <p> Watch this <a href="https://www.youtube.com/watch?v=hU6BVxtGd5g">video</a>. Go back to that list of projects you made before you began and apply some storytelling framework to them. I used an adaptation of the "person in the hole" framework and my acronym was SCOUTL. Here are some examples:</p>
     <ul>
         <li><strong>Situation:</strong> senior/staff engineer in team/org of x people</li>
@@ -113,10 +121,10 @@
         <li><a href="https://www.tryexponent.com/coach/Alberto-Tretti?ref=buy-tom-a-coffee">Alberto Tretti</a></li>
     </ul>
 
-    <h2>Interview Phase</h2>
+    <h2 id="interview-phase">Interview Phase</h2>
     <p>This took me 2 months because I wanted to space it out to have as much time to focus on each stage as possible.</p>
     
-    <h3>Buckets</h3>
+    <h3 id="buckets">Buckets</h3>
     <p> Interviewing is a skill and you get better with practice. Anticipate that you'll blow a few.</p>
     <p> I addressed this by having two buckets of 3 companies:</p>
     <ul>
@@ -136,21 +144,22 @@
     </ul>
     <p> Also know that interviewing is partly luck and you can do everything right in terms of preparation and still fail. It happened to me many times. For every interview I passed, I probably failed one or two.</p>
 
-    <h3>Getting Interviews</h3>
+    <h3 id="getting-interviews">Getting Interviews</h3>
     <p> Don't bother sending your resume to job portals. It's mostly a waste of time. If you want to work for a company, add internal recruiters on LinkedIn and ask them to set up a call. I got rejected by company portals and then later was advanced by a human recruiter for the exact same role.</p>
     <p> If you think your resume needs work, you can book a session with <a href="https://www.tryexponent.com/coach/Carlos-Hattix?ref=buy-tom-a-coffee">Carlos Hattix</a>. Carlos was amazing, but his advice was mostly that my resume was fine and to ignore portals and do what I described in the point above.</p>
     <p> You'll want to contact all the recruiters EARLY because it takes weeks sometimes to set up the interviews above. It's fine to do a call and then say "I want a few weeks to prep, can I do my first coding round on Monday the nth."</p>
 
-    <h3>Negotiation</h3>
+    <h3 id="negotiation">Negotiation</h3>
     <p> Read <a href="https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/">this article</a> again. This is your bible for negotiating the best offer possible. It worked for me for Tesla vs a startup and also for Atlassian vs Canva. It can feel scary but trust the process.</p>
     <p> I also hired <a href="https://www.tryexponent.com/coach/Natalie-Gray?ref=buy-tom-a-coffee">Natalie Gray</a> as my private negotiation coach. She did quick calls with me during the whole process to help me. This paid for itself many times over.</p>
 
-    <h2>The State of Interviewing and the Luxury of Coaching</h2>
-    <p> It's not fair that some people can spend thousands on private coaching for tech interviews, but others can't. The sad thing is that an entire industry has been created to help people interview for the tech industry. It's a whole big business helping people "crack the interview."</p>
+    <h2 id="the-state-of-interviewing-and-the-luxury-of-coaching">The State of Interviewing and the Luxury of Coaching</h2>
+    <p> It's not fair that some people can spend thousands on private coaching for tech interviews, but others can't. The sad thing is that an entire industry has been created for tech interviews. It's big business helping people "crack the interview."</p>
     <p> I might have received the same offers/salary without coaching, but I doubt it. It sucks for those that can't afford it and it's not a level playing field. It's worth knowing it exists though, because whether you pay for coaching or not, you'll be competing against people who did.</p>
     <p> It probably shows that tech interviewing is broken - too formulaic and game-able.</p>
 
-    <p> If you found this post helpful, and want to try coaching, please book any of the Exponent coaches using the affiliate links in this blog post.</p>
+    <h3>Disclaimer</h2>
+    <p>The links to the Exponenet coaches are affiliate links. If you DO want to try coaching (and want to say thanks for this article), please book via these links!</p>
 </div>
 
 </body>
