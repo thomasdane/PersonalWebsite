@@ -101,6 +101,75 @@
     <p> I also found these helpful for Staff level: <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/">Microsoft Patterns</a>. For me, the sidecar, saga, and circuit breaker patterns all came up in interviews.</p>
     <p> The best thing I did was mock interviews with <a href="https://www.tryexponent.com/coach/Geoff-Mendal?ref=buy-tom-a-coffee">Geoff Mendal</a> once I felt ready. His sessions fill up months in advance, so book them early.</p>
 
+    <h4>Structure</h4>
+    <p>I used an acronym FNADS to help structure my answers.</p>
+    <p>FNADS = Functional, Non-Functional, APIs, Data Model and Deep Dive, Security and Observability</p>
+    <p>I used to start with an MVP and then scale it at the end. I found for Staff interviews you need to think about scale from the start.</p>
+    <p>Budget for 45 mins:</p>
+    <ul>
+        <li>Functional (5 mins)</li>
+            <ul>
+                <li>Listen!</li>
+                <li>Write down all details</li>
+                <li>Ask lots of questions</li>
+                <li>Voice all assumptions</li>
+                <li>Narrow down scope if required</li>
+            </ul>
+        <li>Non Functional (5 mins)</li>
+            <ul>
+                <li>Here we talk about scale</li>
+                <li>Ask about USB (users, storage, bandwidth) so we can do capacity estimates</li>
+                <li>Users - how many users per day/month? What is their behaviour? We will use this plus the Rules of Thumb below to estimate Requests Per Second (rps)</li>
+                <li>Storage - provide an estimate of each read and write payload size</li>
+                <li>Bandwidth - rps * storage(request size)</li>
+            </ul>
+        <li>APIs (5-15 mins)</li>
+            <ul>
+                <li>Start writing down some routes and sample payloads. Thinking about contracts/interfaces will help you build the system and think about the data model</li>
+                <li>Can also code the response JSON like {"foo": "bar"}</li>
+            </ul>
+        <li>Data model and dive deep (15 mins)</li>
+        <ul>
+            <li>You can start here by hand-waving over sql vs nosql. You often don't need to go into more detail than that.</li>
+            <li>If the interviewer presses though you'll want to talk about most major DB families and their pros/cons.</li>
+            <li>Maybe write out a DB schema but not always necesary</li> 
+        </ul>
+        <li>Security and Observability (5 mins)</li>
+        <ul>
+            <li>This can just be some token mention at the end, but save time for it</li>
+            <li>Talk about monitoring, alerting, how you'd reduce impact of regressions</li>
+            <li>Talk about common security issues (think about client input) and how you'd mitigate them</li> 
+        </ul>    
+    </ul>
+    
+    <h4>Handy rules of thumb</h4>
+    <p>These are shorthands you can use for capacity estimates. They are close enough for "back of the napkin" math.</p>
+    <p>Time:</p>
+    <ul>
+        <li>About 100k seconds in a day</li>
+        <li>About 2.5m seconds in a month</li>
+        <li>So 10m requests per month = 4 requests per second </li>
+    </ul>
+
+    <p>Storage:</p>
+    <ul>
+        <li>1 char/letter is 1 byte, so 1000 chars of text is 1kb</li>
+        <li>1 photo is 1mb</li>
+        <li>1 min of video is about 5mb</li>
+    </ul>
+
+    <p>Reliability:</p>
+    <ul>
+        <li>Five nines - 5 minutes of downtime</li>
+        <li>Four nines - 1 hour of downtime</li>
+        <li>Three nines - 9 hours of downtime</li>
+    </ul>
+
+    <p>Performance:</p>
+    <ul>
+        <li>1k qps per server. More than this and you'll need to horizontally scale</li>
+    </ul>
+
     <h3 id="behavioral">Behavioral</h3>
     <p> Watch this <a href="https://www.youtube.com/watch?v=hU6BVxtGd5g">video</a>. Go back to that list of projects you made before you began and apply some storytelling framework to them. I used an adaptation of the "person in the hole" framework and my acronym was SCOUTL. Here are some examples:</p>
     <ul>
